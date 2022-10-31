@@ -4,8 +4,8 @@ namespace Testimonials_BforeAi;
 use Testimonials_BforeAi\PageSettings\Page_Settings;
 
 
-defined( 'TESTIMONIALDT_BASEPATH' ) || define( 'TESTIMONIALDT_BASEPATH', plugin_dir_path( __FILE__ ) );
-defined( 'TESTIMONIALDT_BASEURI' ) || define( 'TESTIMONIALDT_BASEURI', plugin_dir_url( __FILE__ ) );
+defined( 'TESTIMONIAL-BF_BASEPATH' ) || define( 'TESTIMONIAL-BF_BASEPATH', plugin_dir_path( __FILE__ ) );
+defined( 'TESTIMONIAL-BF_BASEURI' ) || define( 'TESTIMONIAL-BF_BASEURI', plugin_dir_url( __FILE__ ) );
 
 /**
  * Class Plugin
@@ -53,16 +53,16 @@ class Plugin {
 	 */
 	public function widget_scripts() {
 		wp_register_script( 'elementor-hello-world', plugins_url( '/assets/js/hello-world.js', __FILE__ ), [ 'jquery' ], false, true );
-		wp_enqueue_script( 'bootstrap.min.js',TESTIMONIALDT_BASEURI.'public/js/bootstrap.bundle.min.js', array('jquery'), '5.1.3', true );
-		wp_enqueue_script( 'owl.carousel.min.js',TESTIMONIALDT_BASEURI.'public/js/owl.carousel.min.js', array('jquery'), $this->generarCodigo(3), true );
-		wp_enqueue_script( 'w-dt.js',TESTIMONIALDT_BASEURI.'public/js/w-dt.js', array('jquery'), $this->generarCodigo(3), true );
+		wp_enqueue_script( 'bootstrap.min.js',TESTIMONIAL-BF_BASEURI.'public/js/bootstrap.bundle.min.js', array('jquery'), '5.1.3', true );
+		wp_enqueue_script( 'owl.carousel.min.js',TESTIMONIAL-BF_BASEURI.'public/js/owl.carousel.min.js', array('jquery'), $this->generarCodigo(3), true );
+		wp_enqueue_script( 'w-dt.js',TESTIMONIAL-BF_BASEURI.'public/js/w-dt.js', array('jquery'), $this->generarCodigo(3), true );
 
 		/** Enqueue plugin styles */
-		wp_enqueue_style( 'bootstrap.min.css', TESTIMONIALDT_BASEURI.'public/css/bootstrap5.1.3.min.css', array(), '5.1.3');
-		wp_enqueue_style( 'awesome.css', TESTIMONIALDT_BASEURI.'public/css/font-awesome.min.css', array(), '4.7.0');
-		wp_enqueue_style( 'owl.carousel.min.css',TESTIMONIALDT_BASEURI.'public/css/owl.carousel.min.css', array(), $this->generarCodigo(3));
-		wp_enqueue_style( 'animate.min.css',TESTIMONIALDT_BASEURI.'public/css/animate.min.css', array(), $this->generarCodigo(3));
-		wp_enqueue_style( 'w-dt.css',TESTIMONIALDT_BASEURI.'public/css/w-dt.css', array(),$this->generarCodigo(3));
+		wp_enqueue_style( 'bootstrap.min.css', TESTIMONIAL-BF_BASEURI.'public/css/bootstrap5.1.3.min.css', array(), '5.1.3');
+		wp_enqueue_style( 'awesome.css', TESTIMONIAL-BF_BASEURI.'public/css/font-awesome.min.css', array(), '4.7.0');
+		wp_enqueue_style( 'owl.carousel.min.css',TESTIMONIAL-BF_BASEURI.'public/css/owl.carousel.min.css', array(), $this->generarCodigo(3));
+		wp_enqueue_style( 'animate.min.css',TESTIMONIAL-BF_BASEURI.'public/css/animate.min.css', array(), $this->generarCodigo(3));
+		wp_enqueue_style( 'w-dt.css',TESTIMONIAL-BF_BASEURI.'public/css/w-dt.css', array(),$this->generarCodigo(3));
 	
 	}
 
